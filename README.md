@@ -34,7 +34,7 @@
 # 👤 Author
 
 [GitHub](https://github.com/IfzaRasool)
-Twitter: @IfzaRasool
+
 [LinkedIn](https://www.linkedin.com/in/ifza-arain-0b922b102/)
 
 # 🤝 Contributing
