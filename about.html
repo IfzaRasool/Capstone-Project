@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script src="https://kit.fontawesome.com/df4dde8176.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <script>
+            window.dataLayer = window.dataLayer || [];
+    
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+    
+            gtag('config', 'G-G93G9LCKSY');
+        </script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>DeveloperWeek</title>
+    </head>
 
-        function gtag() {
-            window.dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
 
-        gtag('config', 'G-G93G9LCKSY');
-    </script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>DeveloperWeek</title>
-</head>
-
-<body>
-    <div class="hamburger-menu" id="link">
-        <i class="far fa-times-circle fa-3x closeIcon"></i>
-        <ul class="hamburger-detail">
-            <li class="ham-home"><a class="ham-home" href="#home">Home</a></li>
-            <li class="ham-about"><a class="ham-about" href="about.html">About</a></li>
-            <li class="ham-program"><a class="ham-program" href="#program">Program</a></li>
-        </ul>
-    </div>
-    <header class="header">
-        <i class="hamburger" href="index.html"><img src="images/icons/hamburger.png" href="hamburger"></i>
-        <ul class="nav-top-list">
-            <li><a href="https://www.facebook.com/oybek.kayumov.39/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-lg"></i>
-                </a></li>
-            <li><a href="https://twitter.com/KayumovOybek" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter fa-lg"></i>
-                </a></li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">My Page</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-        <nav class="desk-nav">
-                <a class="logo" href="#home"><img src="images/logo2.png" alt="logo"></a>
-                <ul class="nav-bottom-list">
-                    <li><a class="link about-link" href="about.html">About</a></li>
-                    <li><a class="link" href="#program">Program</a></li>
-                    <li><a class="link" href="#join">Join</a></li>
-                    <li><a class="link" href="#partner">Sponsor</a></li>
-                    <li><a class="link" href="#news">News</a></li>
-                    <li class="nav-list-button"><a class="link" href="#home">Media Centre</a></li>
-                </ul>
-        </nav>
-    </header>
+    <body>
+        <div class="hamburger-menu">
+            <i class="far fa-times-circle fa-3x closeIcon"></i>
+            <ul class="hamburger-detail">
+                <li class="ham-home"><a class="ham-home" href="#home">Home</a></li>
+                <li class="ham-about"><a class="ham-about" href="about.html">About</a></li>
+                <li class="ham-program"><a class="ham-program" href="#program">Program</a></li>
+            </ul>
+        </div>
+        <header class="header">
+            <a class="hamburger" href="index.html"><img src="images/icons/hamburger.png" alt="hamburger"></a>
+            <ul class="nav-top-list">
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook fa-lg"></i>
+                    </a></li>
+                <li><a href="https://www.linkedin.com/in/ifza-arain-0b922b102/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">My Page</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            <nav class="desk-nav">
+                    <a class="logo" href="index.html"><img src="images/logo2.png" alt="logo"></a>
+                    <ul class="nav-bottom-list">
+                        <li><a class="link about-link" href="about.html">About</a></li>
+                        <li><a class="link" href="#program">Program</a></li>
+                        <li><a class="link" href="#join">Join</a></li>
+                        <li><a class="link" href="#partner">Sponsor</a></li>
+                        <li><a class="link" href="#news">News</a></li>
+                        <li class="nav-list-button"><a class="link" href="#home">Media Centre</a></li>
+                    </ul>
+            </nav>
+        </header>
         <section class="about-page">
             <h1 class="top-about">"# DEVWEEK2022"</h1>
             <h2 class="main-about-heading">DEVELOPERWEEK<sub>TM</sub></h2>
@@ -89,13 +91,9 @@
             <img class="partner-images" src="images/partner/Women-Who-Code-1.png" alt="partner-images">
         </section>
     <footer class="about-end">
-        <a href="#home"><img class="footer-logo" src="images/logo2.png" alt="logo"></a>
+        <a href="index.html"><img class="footer-logo" src="images/logo2.png" alt="logo"></a>
     <p class="footer-para">copyright &copy; 2021 facebook All Right Reserved<br> to find out more,full summit schedule.registration and tickets, Please visit Developer week at: https://www.developerweek.com/</p>
     </footer>
-
-    
-
-
 
     <script src="./js/app.js"></script>
 

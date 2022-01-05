@@ -656,4 +656,10 @@ sub {
   .program-btn-mob {
     display: none;
   }
+
+  .partner-images {
+    padding: 2rem;
+    margin-left: 12rem;
+    width: 14%;
+  }
 }
