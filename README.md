@@ -2,7 +2,7 @@
 # Capstone-Project:
 # Conferece Website(DeveloperWeek)
  Responsive Web Template:
-![screenshot](images/project-image.png)
+![screenshot](images/project.png)
 
 - This project is a  conference+Expo Series website .Anyone can come and join the conferece all around the world and able to view the date and time  and also access the information of the event Speakers and upcoming events.
 
@@ -56,9 +56,8 @@ I took help from these link these are very help full.
 Give a ⭐️ if you like this project!
 
 # Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+Design and inspiration by Cindy Shin on Behance.
+
 
 📝 # License
 This project is [MIT](./MIT.md) licensed.
