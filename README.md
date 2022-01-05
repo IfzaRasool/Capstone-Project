@@ -17,7 +17,7 @@
 
  # Live Demo :
  
-[Live demo here](https://ifzarasool.github.io/Portfolio-desktop-version/) 
+[Live demo here](https://ifzarasool.github.io/Capstone-Project/) 
 
 # Installaion:
  - Linters 
@@ -26,40 +26,35 @@
  - stylelintrc
 
  # FrameWork:
+
  visual studio code/optional
 
-# Tool
-Figma
 
-👤 Author
 
-GitHub: @IfzaRasool
+# 👤 Author
+
+[GitHub](https://github.com/IfzaRasool)
 Twitter: @IfzaRasool
-LinkedIn: Ifza Arain
+[LinkedIn](https://www.linkedin.com/in/ifza-arain-0b922b102/)
 
-🤝 Contributing
+# 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the issues page.
 
-# Credits
-
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-https://www.youtube.com/watch?v=bsVHag6qijY&list=PLu8EoSxDXHP7xj_y6NIAhy0wuCd4uVdid&index=7
-https://learn.shayhowe.com/html-css/opening-the-box-model/#how-are-elements-displayed
-
-
-I took help from these link these are very help full.
 
 # Show your support
+
 Give a ⭐️ if you like this project!
 
 # Acknowledgments
+
 Design and inspiration by Cindy Shin on Behance.
 
 
-📝 # License
+# 📝 License
+
 This project is [MIT](./MIT.md) licensed.
 
 

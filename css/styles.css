@@ -162,6 +162,10 @@ sub {
   margin: 2rem;
 }
 
+.program-main:hover {
+  border: 5px solid white;
+}
+
 .program-icon {
   justify-content: center;
   align-items: center;
@@ -590,10 +594,6 @@ sub {
     width: 100%;
     padding-left: 1rem;
     font-size: 14px;
-  }
-
-  #workshop {
-    border: 5px solid white;
   }
 
   .program-btn-desk {
