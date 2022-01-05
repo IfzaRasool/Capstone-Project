@@ -1,134 +1,94 @@
-const menu = document.querySelector('.menu');
-const menuItems = document.querySelectorAll('.menuItem');
 const hamburger = document.querySelector('.hamburger');
 const closeIcon = document.querySelector('.closeIcon');
-const menuIcon = document.querySelector('.menuIcon');
-const modalContainer = document.querySelector('.modal');
-const portfolioJs = document.querySelector('.main-post-container');
-const deskportfolioJs = document.querySelector('.desk-main-post-container');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const SpeakerList = document.querySelector('.feature-speakers');
+const More = document.querySelector('.more');
+const Less = document.querySelector('.less');
 
-modalContainer.style.display = 'none';
-closeIcon.style.display = 'none';
+hamburgerMenu.style.display = 'none';
+Less.style.display = 'none';
 
 function toggleMenu() {
-  if (menu.classList.contains('showMenu')) {
-    menu.classList.remove('showMenu');
-    closeIcon.style.display = 'none';
-    menuIcon.style.display = 'block';
-  } else {
-    menu.classList.add('showMenu');
-    closeIcon.style.display = 'block';
-    menuIcon.style.display = 'none';
-  }
+  hamburgerMenu.style.display = 'inherit';
 }
 hamburger.addEventListener('click', toggleMenu);
-menuItems.forEach((menuItem) => {
-  menuItem.addEventListener('click', toggleMenu);
-});
 
-/* POP Window */
+function CloseMenu() {
+  hamburgerMenu.style.display = 'none';
+}
+closeIcon.addEventListener('click', CloseMenu);
 
 const workObject = [{
-  Title: 'Multi-Post Stories',
-  images: 'Icons/Rectangle.png',
-  cardDescription: 'A daily selection of privately personalized reads; no accounts or sign-ups required, has been the industries standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text',
-  languages: ['css', 'html', 'bootstrap', 'Ruby'],
-
+  images: ['images/speakers/cem-yildirm.jpeg', 'images/speakers/zain-Asgar.png', 'images/speakers/sheganku.jpg', 'images/speakers/dan-sturman.jpeg', 'images/speakers/Sanjeev.jpeg', 'images/speakers/dan-sturman.jpeg'],
+  speakerName: ['Cem Yildirm', 'Zain Asgar', 'Gerta Sheganaku', 'Dan Sturman', 'Sanjeev Mervana', 'Dan Sturman'],
+  speakerPost: ['VP & Head of Engineering @ Fast', 'GVP & Product GM @ New Relic', 'Co-Founder and COO @ LocalStack', 'Chief Technology Officer @ Roblox', 'Vice President Products, Emerging Technologies & Incubation @ Cisco Systems', 'Chief Technology Officer @ Roblox'],
+  speakerDiscription: ['Cem Yildirim is the vice president and head of engineering at Fast, where he oversees the development of products, including Fast Checkout, and Fast’s growing engineering organization.', 'Zain Asgar is currently the GVP/GM - Pixie at New Relic, through the acquisition of Pixie Labs Inc. where he was the co-founder/CEO.', 'Gerta is co-founder and COO of LocalStack, where she and her team are obsessed with building tools for extraordinary Developer Experience (DevEx). LocalStack is the leading platform for local cloud development, based on the hugely popular open source framework with 37k+ stars on Github.', 'an Sturman is the Chief Technology Officer at Roblox where he manages and supports Roblox’s diverse blend of engineering leaders in a variety of specialties including; App, Game Engine, Developer, International, Economy, Safety, and Platform Engineering groups.', 'Sanjeev Mervana is the Vice President Products, Emerging Technologies & Incubation at Cisco Systems. He has broadly applicable experience in building go to market strategies for complex hardware & software ; from product definition through end of life (both inbound and outbound).', 'an Sturman is the Chief Technology Officer at Roblox where he manages and supports Roblox’s diverse blend of engineering leaders in a variety of specialties including; App, Game Engine, Developer, International, Economy, Safety, and Platform Engineering groups.'],
 }];
-
-for (let i = 0; i <= 4; i += 1) {
-  for (let j = 0; j < workObject.length; j += 1) {
-    const allWork = workObject[j];
-    portfolioJs.innerHTML += `
-  <section class="primary-post-sec3">
-  <div class="work-place-img"></div>
-  <h2>${allWork.Title}</h2>
-  <p>${allWork.cardDescription}</p>
-  <ul class="languages">
-      <li>${allWork.languages[j]}</li>
-      <li><img src=${allWork.images} alt="divide line1"></li>
-      <li>${allWork.languages[j + 1]}</li>
-      <li><img src=${allWork.images} alt="divide line2"></li>
-      <li>${allWork.languages[j + 2]}</li>
-      <li> <img src=${allWork.images} alt="divide line3"></li>
-      <li>${allWork.languages[j + 3]}</li>
-  </ul>
-  <button class="work-button"> See Project</button>
-</section>
+if (window.innerWidth > 768) {
+  for (let i = 0; i <= 5; i += 1) {
+    for (let j = 0; j < workObject.length; j += 1) {
+      const allWork = workObject[j];
+      SpeakerList.innerHTML += `
+      <div class="speaker1">
+      <img class="speaker1-image" src="${allWork.images[i]}" alt="speaker1">
+      <h1>${allWork.speakerName[i]}</h1>
+      <h2>${allWork.speakerPost[i]}</h2>
+      <p>${allWork.speakerDiscription[i]}</p>
+      </div>
 `;
+    }
+  }
+} else if (window.innerWidth < 768) {
+  for (let i = 0; i <= 1; i += 1) {
+    for (let j = 0; j < workObject.length; j += 1) {
+      const allWork = workObject[j];
+      SpeakerList.innerHTML += `
+      <div class="speaker1">
+        <img class="speaker1-image" src="${allWork.images[i]}" alt="speaker1">
+        <h1>${allWork.speakerName[i]}</h1>
+        <h2>${allWork.speakerPost[i]}</h2>
+        <p>${allWork.speakerDiscription[i]}</p>
+        </div>
+  `;
+    }
   }
 }
 
-for (let i = 0; i <= 2; i += 1) {
-  for (let j = 0; j < workObject.length; j += 1) {
-    const allWork = workObject[j];
-    deskportfolioJs.innerHTML += `
-    <section class="desk-primary-post-sec">
-    <div class="desk-post-image"></div>
-    <div class="desk-ellipse-work-sec1"></div>
-    </section>
-    <section class="desk-primary-post-sec">
-    <h2 class="desk-post-heading">${allWork.Title}</h2>
-    <p class="desk-post-detail">${allWork.cardDescription}</p>
-    <ul class="languages">
-        <li>${allWork.languages[j]}</li>
-        <li><img src="${allWork.images}" alt="divide line1"></li>
-        <li>${allWork.languages[j + 1]}</li>
-        <li><img src="${allWork.images}" alt="divide line2"></li>
-        <li>${allWork.languages[j + 2]}</li>
-        <li> <img src="${allWork.images}" alt="divide line3"></li>
-        <li>${allWork.languages[j + 3]}</li>
-    </ul>
-    <button class="work-button">See Project</button>
-    </section>
-    <section class="desk-primary-post-sec">
-    <h2 class="desk-post-heading">${allWork.Title}</h2>
-    <p class="desk-post-detail">${allWork.cardDescription}</p>
-    <ul class="languages">
-        <li>${allWork.languages[j]}</li>
-        <li><img src="${allWork.images}" alt="divide line1"></li>
-        <li>${allWork.languages[j + 1]}</li>
-        <li><img src="${allWork.images}" alt="divide line2"></li>
-        <li>${allWork.languages[j + 2]}</li>
-        <li> <img src="${allWork.images}" alt="divide line3"></li>
-        <li>${allWork.languages[j + 3]}</li>
-    </ul>
-    <button class="work-button">See Project</button>
-    </section>
-                <section class="desk-primary-post-sec">
-                    <div class="desk-post-image"></div>
-                    <div class="ellipse-img4"></div>
-                </section>
-`;
+function morebtn() {
+  for (let i = 2; i <= 5; i += 1) {
+    for (let j = 0; j < workObject.length; j += 1) {
+      const allWork = workObject[j];
+      SpeakerList.innerHTML += `
+      <div class="speaker1">
+        <img class="speaker1-image" src="${allWork.images[i]}" alt="speaker1">
+        <h1>${allWork.speakerName[i]}</h1>
+        <h2>${allWork.speakerPost[i]}</h2>
+        <p>${allWork.speakerDiscription[i]}</p>
+        </div>
+  `;
+    }
   }
+  Less.style.display = 'inherit';
+  More.style.display = 'none';
 }
-
-const openModalButtons = document.querySelectorAll('.work-button');
-const appWrapper = document.querySelector('.app-wrap');
-const modalClose = document.querySelector('.modal-close');
-
-function openModal() {
-  appWrapper.style.display = 'none';
-  modalContainer.style.display = 'inherit';
-}
-openModalButtons.forEach((openModalButtons) => {
-  openModalButtons.addEventListener('click', openModal);
-});
-
-function closeModal() {
-  modalContainer.style.display = 'none';
-  appWrapper.style.display = 'inherit';
-}
-modalClose.addEventListener('click', closeModal);
-
-/* form Validation */
-const form = document.querySelector('.contact-form');
-const email = document.getElementById('email');
-const errMsg = document.querySelector('.err-msg');
-
-form.addEventListener('submit', (e) => {
-  if (email.value === email.value.toLowerCase()) {
-    errMsg.innerHTML = '';
-  } else { e.preventDefault(); }
-  errMsg.innerHTML = '* Please enter a correct email in lowercase';
+More.addEventListener('click', morebtn);
+Less.addEventListener('click', () => {
+  document.getElementById('speaker-card').innerHTML = '';
+  Less.classList.add('hidden');
+  More.classList.remove('hidden');
+  for (let i = 0; i <= 1; i += 1) {
+    for (let j = 0; j < workObject.length; j += 1) {
+      const allWork = workObject[j];
+      SpeakerList.innerHTML += `
+      <div class="speaker1">
+        <img class="speaker1-image" src="${allWork.images[i]}" alt="speaker1">
+        <h1>${allWork.speakerName[i]}</h1>
+        <h2>${allWork.speakerPost[i]}</h2>
+        <p>${allWork.speakerDiscription[i]}</p>
+        </div>
+  `;
+    }
+  }
+  More.style.display = 'inherit';
+  Less.style.display = 'none';
 });
