@@ -1,11 +1,12 @@
 
-# Project:
-# Portfolio-Desktop Version
+# Capstone-Project:
+# Conferece Website(DeveloperWeek)
  Responsive Web Template:
-![screenshot](Icons/project-image.png)
+![screenshot](images/project-image.png)
 
+- This project is a  conference+Expo Series website .Anyone can come and join the conferece all around the world and able to view the date and time  and also access the information of the event Speakers and upcoming events.
 
-#Build with
+# Build with
 
 # Languages :
 
